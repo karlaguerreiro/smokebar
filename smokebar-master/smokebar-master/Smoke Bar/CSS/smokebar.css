@@ -1,0 +1,60 @@
+body {
+ background:  #FFFFFF url("smokebar.css/lounge"); 
+}
+
+
+h4 { 
+    font-size: 15px;  
+    color: white ;
+    font-family: "Dancing Script" sans-serif ; ; 
+  }
+
+  .header-2 {
+    background-color: grey;
+    width: auto;
+    height: auto;
+    padding: 10px;
+
+
+  }
+
+.menu-principal {
+
+background-color: black;
+background-size: absolute;
+height: 100px; //.altura
+margin-left: 0px; /*Margem direita*/
+margin-right: 0px; 
+
+
+
+}
+
+
+main {
+    margin: 0 auto; 
+    width: 980px;
+    position : absolute;
+}
+
+.logo {
+    float: left;
+    padding: 16px;
+    width: 70%;
+
+    }
+
+.redes-sociais ul li {
+    display:inline-block; 
+    float: right;
+    list-style: none;
+    margin-left: 5px;
+    width: 25%;
+    background-position: 100% 50%; 
+}
+
+.redes-sociais{
+    width: 25%;
+    float: right;
+}
+
