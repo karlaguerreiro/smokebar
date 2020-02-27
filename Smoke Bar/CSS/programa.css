@@ -1,17 +1,25 @@
 * {
     margin: 0;
-    padding: 0;
     background-color:#1C1C1C ;
+    }
+
+    body {
+        width:100%; /*largura*/
+        height: 0px; /*altura*/ /*NUNCA TIRAR*/
+        background-color: #222;
+        
     }
    
    /*Barra do menu */
     .menu {
-    width: 100%;
-    height: 50px;
+    margin-left: 0px;
+    width:100%; /*largura*/
+    height: 40px; /*altura*/
     background-color: #222;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
    
+    
    /*Estilizando as listas */
     .menu ul {
     list-style: none;
@@ -19,12 +27,12 @@
     }
    
    .menu ul li {
-    width: 150px;
+    width: 135px;/*distância*/
     float: left;
     }
    
    .menu a {
-    padding: 15px;
+    padding: 10px;
     display: block;
     text-decoration: none;
     text-align: center;
@@ -48,19 +56,18 @@
         .menu a:hover {
             background-color: #f4f4f4;
             color: #555;
+
             }
 
         .sair {
-            position: right;
-            width: 100%;
-            height: 10px;
-            margin-top: 10px;
-            Font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
+            float: right;
+            margin-right: 30px;
+            Font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
 
         /* Botões de novo pedido e cliente */
-        .novo {
+        .novo  {
             position: right;
             width: 100%;
             height: 10px;
@@ -94,23 +101,54 @@
                 }
     
 
-            .novo :hover {
+            .novo a:hover {
                 background-color: #f4f4f4;
                 color: #555;
+                border-radius:10px;
+              }
+             h2 ,strong , p { 
+                    color: black;
+              }
+
+              input {
+                  background-color: LightGrey	;
+              }
+
+              #pedido{
+                  background-color: white;
+                  border-radius: 10px;
               }
 
             
-            
+              .modal-dialog {
+               background-color:rgb(9, 12, 12);
+              }
 
+              .modal-body , h3 , h2 , form {
+                  background-color: white;
+              }
+              .modal-title ,   .modal-footer {
+                  background-color: white;
+                  color: black;
+              }
+
+              .modal-header , .modal-title   {
+                  background-color: teal;
+              }
+
+              input {
+                  align: center;
+                  background-color: white;
+              }
 
    #bt_menu {
     display: none;
     }
    
-
+    .container {  padding:0px ; margin: 0;}
    
    /*Deixando o Menu Responsivo */
-   @media(max-width: 800px) 
+   @media(max-width: 1000px) 
 {
    label[for=”bt_menu”] {
     display: block;
@@ -118,8 +156,6 @@
      
    #bt_menu:checked ~ .menu{
     margin-left: 0;
-
-
     }
 
 
@@ -146,13 +182,4 @@
         margin-left: -100%;
         transition: all .4s;
         }
-         
-
-         
-     
-
-
-
 }
-
-

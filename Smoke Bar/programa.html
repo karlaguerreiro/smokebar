@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="./CSS/programa.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Painel - Smoke Bar </title>
@@ -14,39 +15,108 @@
 
 
 <body>
-    <input type="checkbox" id="bt_menu">
-    <label for="bt_menu"> &#9776; </label>
-
-    <div class="menu">
-
-        <ul>
-            <li> <a href="#">Clientes</a></li>
 
 
-            <li> <a href="# ">Pedidos</a> </li>
+    <div class="container">
+        <input type="checkbox" id="bt_menu">
+        <label for="bt_menu"> &#9776; </label>
 
-            <li> <a href="#"> Estoque </a> </li>
+        <div class="menu">
 
-            </li>
-        </ul>
+            <ul>
+                <li> <a href="#">Clientes</a></li>
 
-        <ul class="sair">
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sair</a></li>
-        </ul>
+
+                <li> <a href="# ">Pedidos</a> </li>
+
+                <li> <a href="#"> Estoque </a> </li>
+
+                </li>
+            </ul>
+            <a class="sair" href="#"><span class="glyphicon glyphicon-log-in"></span> Sair</a>
+        </div>
+
+        <div class="novo">
+            <ul>
+                <li> <a button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Cliente">
+                        Novo Cliente </a>
+                </li>
+                <li> <a button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Pedido"> Novo
+                        Pedido
+                    </a> </li>
+
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="modal fade" id="Cliente" role="dialog">
+            <div class="modal-dialog">
+
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Cadastro de Cliente</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Insira as informações do cliente.</p>
+                        <form>
+                            Nome: <input type="text"><br>
+                            CPF: <input type="text"><br>
+                            Data de nascimento: <input type="text"><br>
+                            Rua: <input type="text"><br>
+                            CEP: <input type="text"><br>
+                            Telefone: <input type="text"><br>
+                            <input type="submit" value="Cadastrar">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">C</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
     </div>
 
-    <div class="novo">
-        <ul>
-            <li> <a href="#"> Novo Cliente </a> </li>
-            <li> <a href="#"> Novo Pedido </a> </li>
 
-        </ul>
+    <div class="modal fade" id="Pedido" role="dialog">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-title">Cadastro do Pedido</div>
+                </div>
+                <div class="modal-body">
+
+                    Insira o pedido:
+
+                    <form>
+                        Código do Cliente: <input type="number"><br>
+                        Código do Produto: <input type="number"><br>
+                        Quantidade: <input type="number"><br>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-default" data-dismiss="modal" value="Finalizar Pedido">
+                </div>
+            </div>
+
+        </div>
     </div>
 
 
 
 </body>
-
 
 </html>
