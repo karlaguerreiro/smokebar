@@ -22,4 +22,3 @@ if ( $result ) {
 
 $conn->close();
 
-?>

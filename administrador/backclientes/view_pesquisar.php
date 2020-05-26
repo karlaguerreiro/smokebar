@@ -14,8 +14,6 @@
         $('#example').DataTable();
     });
 
-
-
     function popup(id) {
         window.open('./alterar.php?id=' + id, 'Alterar Dados', 'SEARCH=NO,STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=300, WIDTH=770, HEIGHT=400');
     }
@@ -55,5 +53,3 @@
     </table>
 
 </body>
-
-</html>

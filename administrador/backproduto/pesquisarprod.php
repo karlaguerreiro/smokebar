@@ -6,7 +6,8 @@ $sql = "SELECT * FROM produto";
 $result = mysqli_query($conn, $sql);
 
 
-while ($row = mysqli_fetch_array($result)) {
+while ($row = mysqli_fetch_array($result)) 
+{
     echo "<tr>";
     echo "<td>" . $row['idprod'] . "</td>";
     echo "<td>" . $row['produto'] . "</td>";
@@ -19,11 +20,10 @@ while ($row = mysqli_fetch_array($result)) {
 }
 
 if (isset($_GET['delete'])) {
-    +$sql = "delete FROM produto where idprod='" . $_GET['delete'] . "'";
+    $sql = "delete FROM produto where idprod='" . $_GET['delete'] . "'";
     $result = mysqli_query($conn, $sql);
+
 }
 
 $conn->close();
 
-
-?>

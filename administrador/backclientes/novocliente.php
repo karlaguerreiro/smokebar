@@ -1,22 +1,77 @@
 <html>
 
+
+
 <body>
+
     <form method="post" action="">
 
+    <fieldset >
 
-        Nome: <input type=text name="nome" value="Insira o nome do cliente "> <br>
-        Data de nascimento: <input type=date name="datanasc" value="aaaa/mm/dd"><br>
-        Rg: <input type=text name="rg" value="Insira o RG do cliente"><br>
-        CPF: <input type="number" name="cpf" value="Insira somente números"><br>
-        Telefone: <input type="number" name="telcli" value="Insira somente números"><br>
-        <input type="submit" name ="enviar" value="Enviar">
-        <input type="submit"  value="Voltar">
+    <legend> Dados do Cliente</legend>
+    <table cellspacing ="10">
+    <tr>
+                <td>
+                    <label for="nome">Nome: </label>
+                </td>
+                <td align="left">
+                    <input type="text" name="nomecli">
+                </td>
+              
+          
+        </tr>
+
+        <tr>
+                <td>
+                    <label>Data de nascimento: </label>
+                </td>
+                <td align="left">
+                <input type="date" name="datanasc"  maxlength="13">
+                </td>
+
+        <tr>
+                <td>
+                    <label for="rg">RG: </label>
+                </td>
+                <td align="left">
+                    <input type="text" name="rg" size="13" maxlength="13">
+                </td>
+
+       <tr>
+                <td>
+                    <label>CPF:</label>
+                </td>
+                <td align="left">
+                    <input type="text" name="cpf" size="9" maxlength="11">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>TELEFONE:</label>
+                </td>
+                <td align="left">
+                    <input type="text" name="telefone" size="8" maxlength="11">
+                    <input type="submit" class="enviar" name ="enviar"  value="enviar">
+                </td>
+            </tr>
+
+      
+
+  </table>
+  </fieldset>
+   
+
     </form>
+
+
 </body>
 
 </html>
 
-<?php
+
+
+<?php 
 
 if (isset($_POST["enviar"]))
 {
@@ -30,6 +85,7 @@ require "connection.php";
 @$cpf = $_POST["cpf"];
 @$telcli = $_POST["telcli"];
 
+
 if (mysqli_connect_errno($conn)) {
     echo "Erro: " . mysqli_connect_error();
 } else {
@@ -39,6 +95,7 @@ if (mysqli_connect_errno($conn)) {
     if (mysqli_query($conn, $sql))
        {
         echo "Cliente inserido!";
+        header("Location:./view_pesquisar.php");
     } else {
         echo "Erro:" . mysqli_error($conn);
     }

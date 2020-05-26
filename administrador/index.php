@@ -10,3 +10,9 @@
 
     <?php // Arquivo footer
     require_once "./estruturas/footer.html"; ?>
+
+<body>
+
+
+
+</html>
